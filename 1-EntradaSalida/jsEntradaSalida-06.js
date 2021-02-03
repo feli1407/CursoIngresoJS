@@ -6,6 +6,7 @@ function sumar()
 {
 	let numerouno;
 	let numerodos;
+	let resultado;
 // aca saque los valores del html
 	numerouno = document.getElementById("txtIdNumeroUno").value;
 	numerodos = document.getElementById("txtIdNumeroDos").value;

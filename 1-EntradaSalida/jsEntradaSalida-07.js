@@ -7,6 +7,7 @@ function sumar()
 {	
 	let numerouno;
 	let numerodos;
+	let resultado;
 	  numerouno = document.getElementById("txtIdNumeroUno").value;
 	  numerodos = document.getElementById("txtIdNumeroDos").value;
 	  numerouno = parseInt(numerouno);
@@ -20,6 +21,7 @@ function restar()
 {
 	let numerouno;
 	let numerodos;
+	let resultado;
 	  numerouno = document.getElementById("txtIdNumeroUno").value;
 	  numerodos = document.getElementById("txtIdNumeroDos").value;
 	  numerouno = parseInt(numerouno);
@@ -32,6 +34,7 @@ function multiplicar()
 { 
 	let numerouno;
 	let numerodos;
+	let resultado;
 	  numerouno = document.getElementById("txtIdNumeroUno").value;
 	  numerodos = document.getElementById("txtIdNumeroDos").value;
 	  numerouno = parseInt(numerouno);
@@ -44,6 +47,7 @@ function dividir()
 {
 	let numerouno;
 	let numerodos;
+	let resultado;
 	  numerouno = document.getElementById("txtIdNumeroUno").value;
 	  numerodos = document.getElementById("txtIdNumeroDos").value;
 	  numerouno = parseInt(numerouno);
