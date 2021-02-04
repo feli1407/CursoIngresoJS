@@ -52,7 +52,7 @@ function dividir()
 	  numerodos = document.getElementById("txtIdNumeroDos").value;
 	  numerouno = parseInt(numerouno);
 	  numerodos = parseInt(numerodos);
-	  resultado = numerouno / numerodos;
+	  resultado = parseFloat (numerouno / numerodos);
 	  alert("La division es: "+resultado);
 }
 
