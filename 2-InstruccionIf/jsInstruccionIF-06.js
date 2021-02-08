@@ -9,7 +9,7 @@ function mostrar()
 	{
 		alert("usted es un niño");
 	}
-	else if(edad>18)
+	if(edad>18)
 	{
 		alert("usted es un adulto");
 	}
