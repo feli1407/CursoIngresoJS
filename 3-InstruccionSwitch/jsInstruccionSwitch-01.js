@@ -7,15 +7,15 @@ if(mesdelaño == "Enero")
 {
 	alert("que comiences bien el año!!!.");
 }
-if(mesdelaño == "Marzo")
+else if(mesdelaño == "Marzo")
 {
 	alert("a clases!!!.");
 }
-if(mesdelaño == "Julio")
+else if(mesdelaño == "Julio")
 {
 	alert( "se vienen las vacaciones!!!.");
 }
-if(mesdelaño == "Diciembre")
+else if(mesdelaño == "Diciembre")
 {
 	alert( "Felices fiesta!!!.");
 }

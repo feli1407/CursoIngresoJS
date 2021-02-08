@@ -8,7 +8,7 @@ function mostrar()
 		alert("Excelente, su calificacion es: "+nota);
 	}
     
-	if(nota<4)
+	else if(nota<4)
 	{
 		alert("Vamos, la proxima se puede, su calificacion es: "+nota);
 	}

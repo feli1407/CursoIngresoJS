@@ -15,7 +15,7 @@ function mostrar()
 		}
 
 	}
-	if(valor = "Divorciado")
+	else if(valor = "Divorciado")
     {
 		if(edad<18)
 		{

@@ -9,7 +9,7 @@ function mostrar()
 	{
 		alert("usted es un niño");
 	}
-	if(edad>18)
+	else if(edad>18)
 	{
 		alert("usted es un adulto");
 	}
@@ -40,7 +40,8 @@ function mostrar()
 				alert("usted es un adolecente");
 				break;
 			}
-		
+		// se podria poner un else en vez del switch, porque los num del 13 al 17 serian las opciones
+		// de descarte
 	}
 
 }//FIN DE LA FUNCIÓN
