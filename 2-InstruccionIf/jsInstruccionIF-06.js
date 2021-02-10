@@ -13,35 +13,22 @@ function mostrar()
 	{
 		alert("usted es un adulto");
 	}
-	switch(edad)
+	else
 	{
-		case 13:
-		    {
-		        alert("usted es un adolecente");
-		        break;
-		    }
-		case 14:
-			{
-				alert("usted es un adolecente");
-				break;
-			}
-	    case 15:
-			{
-				alert("usted es un adolecente");
-				break;
-			}
-		case 16:
-			{
-				alert("usted es un adolecente");
-				break;
-			}
-		case 17:
-			{
-				alert("usted es un adolecente");
-				break;
-			}
+		alert("usted es un adolecente");
+	}
+
+	
+    
+	    
+	
+		
+	
+		
+	
+	
 		// se podria poner un else en vez del switch, porque los num del 13 al 17 serian las opciones
 		// de descarte
-	}
+	
 
 }//FIN DE LA FUNCIÓN

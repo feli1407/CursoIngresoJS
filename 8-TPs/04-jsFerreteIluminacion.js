@@ -10,5 +10,70 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    let preciolamparas;
+    let cantidaddelamparas;
+    let preciocondescuento;
+    let marcadelampara;
+    let precioconimpuesto;
+    let impuesto;
+
+    preciolamparas = 35;
+    cantidaddelamparas = document.getElementById("txtIdCantidad").value;
+    cantidaddelamparas = parseInt(cantidaddelamparas);
+    marcadelampara = document.getElementById("Marca").value;
+
+    if(cantidaddelamparas>=6)
+    {
+        preciocondescuento = (preciolamparas * cantidaddelamparas) * 0.5;
+    }
+
+    if(cantidaddelamparas == 5)
+    {
+        if(marcadelampara == "ArgentinaLuz")
+        {
+            preciocondescuento = (preciolamparas * 5) * 0.6;
+        }
+        else
+        {
+            preciocondescuento = (preciolamparas * 5) * 0.7;
+        }
+    }
+
+    if(cantidaddelamparas == 4)
+    {
+        if(marcadelampara == "ArgentinaLuz" || marcadelampara == "FelipeLamparas")
+        {
+            preciocondescuento = (preciolamparas * 4) * 0.75;
+        }
+        else
+        {
+            preciocondescuento = (preciolamparas * 4) * 0.8;
+        }
+    }
+
+    if(cantidaddelamparas == 3)
+    {
+        if(marcadelampara == "ArgentinaLuz")
+        {
+            preciocondescuento = (preciolamparas * 3) * 0.85;
+        }
+        else if(marcadelampara == "FelipeLamparas")
+        {
+            preciocondescuento = (preciolamparas * 3) * 0.9;
+        }
+        else
+        {
+            preciocondescuento = (preciolamparas * 3) * 0.95;
+        }
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = preciocondescuento;
+
+    if(preciocondescuento>120)
+    {
+        precioconimpuesto = preciocondescuento * 1.10;
+        impuesto = precioconimpuesto - preciocondescuento;
+        alert("IIBB Usted pago "+impuesto);
+    }
+
 }

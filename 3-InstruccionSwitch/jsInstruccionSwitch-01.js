@@ -3,21 +3,28 @@ function mostrar()
 let mesdelaño;
 mesdelaño = document.getElementById("txtIdMes").value;
 
-if(mesdelaño == "Enero")
+switch(mesdelaño)
 {
-	alert("que comiences bien el año!!!.");
-}
-else if(mesdelaño == "Marzo")
-{
-	alert("a clases!!!.");
-}
-else if(mesdelaño == "Julio")
-{
-	alert( "se vienen las vacaciones!!!.");
-}
-else if(mesdelaño == "Diciembre")
-{
-	alert( "Felices fiesta!!!.");
+	case "Enero":
+		{
+			alert("que comiences bien el año!!!.");
+			break;
+		}
+    case "Marzo":
+		{
+			alert("a clases!!!.");
+			break;
+		}
+	case "Julio":
+		{
+			alert("se vienen las vacaciones!!!.");
+			break;
+		}
+	case "Diciembre":
+		{
+			alert("Felices fiestas!!!.");
+			break;
+		}
 }
 
 
