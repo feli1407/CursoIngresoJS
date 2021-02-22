@@ -8,7 +8,9 @@ function mostrar()
 
 while(!(sexo == "f" || sexo == "m"))
 {
+
 	sexo = prompt("ingrese f ó m .");
+
 }
 
 document.getElementById("txtIdSexo").value= sexo;	
