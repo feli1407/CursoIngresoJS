@@ -23,7 +23,7 @@ function mostrar()
 	
 	while(claveingresada != "utn750")
 	{
-		claveingresada = prompt("ingrese la clave");
+		claveingresada = prompt("error, ingrese la clave");
 	}
 	
 	alert("la clave es correcta");

@@ -8,7 +8,9 @@ function mostrar()
 	let numeros;
 	let sumapositivos;
 	let multiplicacionnegativos;
-	
+	let flag; //se usa para controlar
+
+	flag=0;
 	sumapositivos=0;
 	multiplicacionnegativos=1;
 	respuesta="si";
@@ -25,6 +27,7 @@ function mostrar()
 		else(numeros<0)
 		{
 			multiplicacionnegativos = multiplicacionnegativos * numeros;
+			flag=1;
 		}
 
 		respuesta = prompt("quiere agregar mas numeros?");
@@ -32,6 +35,12 @@ function mostrar()
 
 
 	document.getElementById("txtIdSuma").value=sumapositivos;
+
+	if(flag==0)//si no se ingresa un numero negativo no se multiplica y el resultado seria 0
+	{
+		multiplicacionnegativos = 0;
+	}
+
 	document.getElementById("txtIdProducto").value=multiplicacionnegativos;
 
 }//FIN DE LA FUNCIÓN
