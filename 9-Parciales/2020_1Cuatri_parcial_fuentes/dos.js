@@ -50,14 +50,14 @@ function mostrar()
   do
   {
     tipoingresado = prompt("ingrese tipo");
-    while(isNaN(tipoingresado) == false && tipoingresado != "arena" && tipoingresado != "cal" && tipoingresado != "cemento")
+    while(isNaN(tipoingresado) == false || tipoingresado != "arena" && tipoingresado != "cal" && tipoingresado != "cemento")
     {
       tipoingresado = prompt("error, ingrese tipo");
     }
 
     cantidaddebolsas = prompt("ingrese cantidad");
     cantidaddebolsas = parseInt(cantidaddebolsas);
-    while(isNaN(cantidaddebolsas) == true && cantidaddebolsas<1)
+    while(isNaN(cantidaddebolsas) == true || cantidaddebolsas<1)
     {
       cantidaddebolsas = prompt("error, ingrese cantidad");
       cantidaddebolsas = parseInt(cantidaddebolsas);
@@ -65,7 +65,7 @@ function mostrar()
 
     precioporbolsa = prompt("ingrese precio");
     precioporbolsa = parseInt(precioporbolsa);
-    while(isNaN(precioporbolsa) == true && cantidaddebolsas<1)
+    while(isNaN(precioporbolsa) == true || cantidaddebolsas<1)
     {
       precioporbolsa = prompt("error, ingrese precio");
       precioporbolsa = parseInt(precioporbolsa);
@@ -156,6 +156,10 @@ acumuladordebolsas = acumuladordebolsas + cantidaddebolsas;
   else if(acumuladorcemento>acumuladorcal && acumuladorcemento>acumuladorarena)
   {
     mensajecantidad = "las bolsas que mas se compraron fueron las de cemento";
+  }
+  else if(acumuladorcemento == acumuladorarena || acumuladorcemento == acumuladorcal || acumuladorarena == acumuladorcal || acumuladorarena == acumuladorcemento || acumuladorcal == acumuladorarena || acumuladorcal == acumuladorcemento)
+  {
+    mensajecantidad = "se compro la misma cantidad de bolsas";
   }
 
   if(preciocemento>precioarena && preciocemento>preciocal)

@@ -45,14 +45,14 @@ contadordevueltas=0;
 while(contadordevueltas<5)
 {
 tipoingresado = prompt("ingrese tipo");
-    while(isNaN(tipoingresado) == false && tipoingresado!="barbijo" && tipoingresado!="jabon" && tipoingresado!="alcohol")
+    while(isNaN(tipoingresado) == false || tipoingresado!="barbijo" && tipoingresado!="jabon" && tipoingresado!="alcohol")
     {
 		tipoingresado = prompt("Error, ingrese tipo");
     }
 
 precioingresado = prompt("ingrese precio");
 precioingresado = parseInt(precioingresado);
-    while(isNaN(precioingresado) == true && precioingresado<100 || precioingresado>300)
+    while(isNaN(precioingresado) == true || precioingresado<100 || precioingresado>300)
 	{
 		precioingresado = prompt("Error, ingrese precio");
 		precioingresado = parseInt(precioingresado);
@@ -60,7 +60,7 @@ precioingresado = parseInt(precioingresado);
 
 cantidaddeunidades = prompt("ingrese cantidad");
 cantidaddeunidades = parseInt(cantidaddeunidades);
-    while(isNaN(cantidaddeunidades) == true && cantidaddeunidades<=0 || cantidaddeunidades>1000)
+    while(isNaN(cantidaddeunidades) == true || cantidaddeunidades<=0 || cantidaddeunidades>1000)
 	{
 		cantidaddeunidades = prompt("ingrese cantidad");
 		cantidaddeunidades = parseInt(cantidaddeunidades);

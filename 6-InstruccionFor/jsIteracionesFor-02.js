@@ -1,11 +1,11 @@
 function mostrar()
 {
-let i;
-i = 0;
+let contador;
+contador = 0;
 
-for(i=10;i>0;i=i-1)
+for(contador=10;contador>0;contador=contador-1)
 {
-	document.write(i+"<br>");
+	document.wrcontadorte(contador+"<br>");
 }
 	
 }
