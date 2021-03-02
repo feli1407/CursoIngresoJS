@@ -187,13 +187,13 @@ let mensajepromediotemperatura;
 let porcentajegatoyperro;
 let cantidadinternado;
 let cantidadadopcion;
-let mensajeestadoclinicomenorcantidad;
 let acumuladorpeso;
 let promediodekilos;
 let gatosinpelomasliviano;
 let nombregatosinpelomasliviano;
 let razagatosinpelomasliviano;
 
+promediodekilos=0;
 acumuladorpeso=0;
 cantidadinternado=0;
 cantidadadopcion=0;
@@ -392,15 +392,15 @@ porcentajegatoyperro = ((contadorgato + contadorperro) * 100) / contadormascotas
 
 if(cantidadadopcion < cantidaddeenfermos && cantidadadopcion < cantidadinternado)
 {
-	mensajeestadoclinicomenorcantidad = "el estado clinico que tiene la menor cantidad de mascotas es adopcion";
+	alert("el estado clinico que tiene la menor cantidad de mascotas es adopcion");
 }
 else if(cantidadinternado < cantidaddeenfermos && cantidadinternado < cantidadadopcion)
 {
-	mensajeestadoclinicomenorcantidad = "el estado clinico que tiene la menor cantidad de mascotas es internado";
+	alert("el estado clinico que tiene la menor cantidad de mascotas es internado");
 }
 else if(cantidaddeenfermos < cantidadinternado && cantidaddeenfermos < cantidadadopcion)
 {
-	mensajeestadoclinicomenorcantidad = "el estado clinico que tiene la menor cantidad de mascotas es enfermo";
+	alert("el estado clinico que tiene la menor cantidad de mascotas es enfermo");
 }
 
 promediodekilos = acumuladorpeso / contadormascotas;
@@ -428,8 +428,6 @@ if(contadorgato>0 && contadorperro>0)
 {
 	alert("Sumando gatos y perros son el "+porcentajegatoyperro+"del total de mascotas");
 }
-
-alert(mensajeestadoclinicomenorcantidad);
 
 alert("el promedio de kilos es: "+promediodekilos);
 
