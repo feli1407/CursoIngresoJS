@@ -1,4 +1,6 @@
-/*Enunciado:
+/* Casco Felipe 43595259 div 1a
+
+Enunciado:
 
 Debemos realizar la carga de una compra de 5(cinco) productos de prevención de contagio,
 de cada una debo obtener los siguientes datos:
@@ -13,142 +15,133 @@ c) Cuántas unidades de Barbijos se compraron en total
 */ 
 function mostrar()
 {
+let contador;
 let tipodeproducto;
 let precio;
 let cantidaddeunidades;
 let marca;
 let fabricante;
-let contadorcompra;
-let contadorjabones;
-let jabonmascaro;
-let cantidadjabonesmascaros;
+let contadorjabon;
+let preciojabonmascaro;
 let fabricantejabonmascaro;
-let cantidadbarbijos;
-let cantidadealcohol;
-let contadordebarbijo;
-let contadordealcohol;
+let cantidadjabonmascaro;
+let contadorbarbijo;
+let contadoralcohol;
+let acumuladorjabon;
+let acumuladorbarbijo;
+let acumuladoralcohol;
 let promedio;
-let mensaje;
 
-contadordealcohol=0;
-contadordebarbijo=0;
-cantidadealcohol=0;
-cantidadbarbijos=0;
-cantidadjabonesmascaros=0; 
-cantidadjabones=0;
-jabonmascaro=0;
-contadorcompra=0;
-contadorjabones=0;
+acumuladorjabon=0;
+acumuladorbarbijo=0;
+acumuladoralcohol=0;
+contadorbarbijo=0;
+contadoralcohol=0;
+contadorjabon=0;
+contador=0;
 
-while(contadorcompra<2)
+for(contador=0;contador<5;contador++)
 {
-	tipodeproducto = prompt("ingrese un producto");
+	tipodeproducto=prompt("ingrese un producto (barbijo, jabon o alcohol");
 	while(isNaN(tipodeproducto) == false || tipodeproducto != "barbijo" && tipodeproducto != "jabon" && tipodeproducto != "alcohol")
 	{
-		tipodeproducto = prompt("error, ingrese un producto");
+		tipodeproducto=prompt("error, ingrese un producto (barbijo, jabon o alcohol");
 	}
 
-	precio = prompt("ingrese precio");
-	precio = parseInt(precio);
+	precio=prompt("ingrese precio del producto");
+	precio=parseInt(precio);
 	while(isNaN(precio) == true || precio < 100 || precio > 300)
 	{
-		precio = prompt("error, ingrese precio");
-		precio = parseInt(precio);
-		
+		precio=prompt("error, ingrese precio del producto");
+	    precio=parseInt(precio);
 	}
 
-	cantidaddeunidades = prompt("ingrese cantidad de unidades");
-	cantidaddeunidades = parseInt(cantidaddeunidades);
+	cantidaddeunidades=prompt("ingrese cantidad de unidades");
+	cantidaddeunidades=parseInt(cantidaddeunidades);
 	while(isNaN(cantidaddeunidades) == true || cantidaddeunidades <= 0 || cantidaddeunidades > 1000)
 	{
-		cantidaddeunidades = prompt("error, ingrese cantidad de unidades");
-		cantidaddeunidades = parseInt(cantidaddeunidades);
-
+		cantidaddeunidades=prompt("error, ingrese cantidad de unidades");
+	    cantidaddeunidades=parseInt(cantidaddeunidades);
 	}
 
-	marca = prompt("ingrese marca");
+	marca=prompt("ingrese marca del producto");
 	while(isNaN(marca) == false)
 	{
-		marca = prompt("error, ingrese marca");
+		marca=prompt("error, ingrese marca del producto");
 	}
 
-	fabricante = prompt("ingrese fabricante");
+	fabricante=prompt("ingrese fabricante del producto");
 	while(isNaN(fabricante) == false)
 	{
-		fabricante = prompt("error, ingrese fabricante");
+		fabricante=prompt("error, ingrese fabricante del producto");
 	}
 
 	switch(tipodeproducto)
 	{
 		case "jabon":
-			
-			if(contadorjabones == 0)
+			if(contadorjabon == 0)
 			{
-				jabonmascaro = precio;
-				cantidadjabones = cantidaddeunidades;
-				cantidadjabonesmascaros = cantidaddeunidades;
-				fabricantejabonmascaro = fabricante;
-				contadorjabones++;
+				preciojabonmascaro=precio;
+				fabricantejabonmascaro=fabricante;
+				cantidadjabonmascaro=cantidaddeunidades;
+				acumuladorjabon=cantidaddeunidades;
+				contadorjabon++;
 			}
 			else
 			{
-				if(precio > jabonmascaro)
+				if(precio>preciojabonmascaro)
 				{
-					jabonmascaro = precio;
-					cantidadjabonesmascaros = cantidaddeunidades;
-					fabricantejabonmascaro = fabricante;
-					cantidadjabones = cantidadjabones + cantidaddeunidades;
+					preciojabonmascaro=precio;
+					fabricantejabonmascaro=fabricante;
+					cantidadjabonmascaro=cantidaddeunidades;
+					acumuladorjabon=acumuladorjabon+cantidaddeunidades;
+					contadorjabon++;
 				}
 				else
 				{
-					cantidadjabones = cantidadjabones + cantidaddeunidades;
+					acumuladorjabon=acumuladorjabon+cantidaddeunidades;
+					contadorjabon++;
 				}
 			}
-
-			contadorjabones++;
 			break;
-
-		case "barbijo":
-			cantidadbarbijos = cantidadbarbijos + cantidaddeunidades;
-			contadordebarbijo++;
-			break;
-
 		case "alcohol":
-			cantidadealcohol = cantidadealcohol + cantidaddeunidades;
-			contadordealcohol++;
+			acumuladoralcohol=acumuladoralcohol+cantidaddeunidades;
+			contadoralcohol++;
 			break;
-
+		case "barbijo":
+			acumuladorbarbijo=acumuladorbarbijo+cantidaddeunidades;
+			contadorbarbijo++;
+			break;		
 	}
 
-	contadorcompra++;
-}
 
-if(cantidadjabones > cantidadealcohol && cantidadjabones > cantidadbarbijos)
-{
-	promedio = cantidadjabones/contadorjabones;
-	mensaje = "el producto con mas unidades en total de la compra es el jabon y el promedio por compra es: "+promedio;
-}
-else if( cantidadealcohol >cantidadjabones && cantidadealcohol > cantidadbarbijos)
-{
-	promedio = cantidadealcohol/contadordealcohol;
-	mensaje = "el producto con mas unidades en total de la compra es el alcohol y el promedio por compra es: "+promedio;
-}
-else if( cantidadbarbijos > cantidadjabones && cantidadbarbijos > cantidadealcohol)
-{
-	promedio = cantidadbarbijos/contadordebarbijo;
-	mensaje = "el producto con mas unidades en total de la compra es el barbijo y el promedio por compra es: "+promedio;
-}
 
-if(contadorjabones == 0)
-{
-	alert("no se compraron jabones");
-}
-else
-{
-	alert("el jabon mas caro sale: "+jabonmascaro+" y se compraron: "+cantidadjabonesmascaros+" del fabricante: "+fabricantejabonmascaro);
-}
 
-alert(mensaje);
-alert("se compraron: "+cantidadbarbijos+" cantidad de barbijos en total");
+
+
 
 }
+
+alert("se compraron: "+cantidadjabonmascaro+" unidades del jabon mas caro del fabricante: "+fabricantejabonmascaro);
+
+if(acumuladorjabon>acumuladorbarbijo && acumuladorjabon>acumuladoralcohol)
+{
+	promedio=acumuladorjabon/contadorjabon;
+	alert("el producto con mas unidades del total de la compra es el jabon y el promedio por compra es: "+promedio);
+}
+else if(acumuladorbarbijo>acumuladorjabon && acumuladorbarbijo>acumuladoralcohol)
+{
+	promedio=acumuladorbarbijo/contadorbarbijo;
+	alert("el producto con mas unidades del total de la compra es el barbijo y el promedio por compra es: "+promedio);
+}
+else if(acumuladoralcohol>acumuladorjabon && acumuladoralcohol>acumuladorbarbijo)
+{
+	promedio=acumuladoralcohol/contadoralcohol;
+	alert("el producto con mas unidades del total de la compra es el alcohol y el promedio por compra es: "+promedio);
+}
+
+alert("se compraron en total: "+acumuladorbarbijo+" barbijos");
+
+
+}
+
